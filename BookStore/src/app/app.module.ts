@@ -7,6 +7,7 @@ import { OwnerComponent } from './owner/owner.component';
 import { RouterModule, Router, Routes } from '@angular/router';
 import { ListComponent } from './list/list.component';
 import { EditComponent } from './edit/edit.component'
+import { bookRecord } from './books';
 
 const routes:Routes = [
   {
@@ -16,7 +17,7 @@ const routes:Routes = [
     path:'list' , component:ListComponent
   },
   {
-    path:'edit:/id' , component:EditComponent 
+    path:'edit' , component:EditComponent ,data:{id :bookRecord}
   }
 ];
 @NgModule({

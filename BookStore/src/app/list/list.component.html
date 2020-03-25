@@ -10,6 +10,7 @@
           <th>Publisher</th>
           <th>Genre</th>
           <th>Edit</th>
+          <th>Delete</th>
         </tr>
         <tr *ngFor="let item of bookList">
             <td>{{item.title}}</td>
@@ -17,7 +18,8 @@
             <td>{{item.price}}</td>
             <td>{{item.publisher}}</td>
             <td>{{item.genre}}</td>
-            <td><button>Edit</button></td>
+            <td><button [routerLink]="['/edit']" routerLinkActive="router-link-active" >Edit</button></td>
+            <td><button (click)="delete()">Delete</button></td>
         </tr>
         </thead>
         <tbody>
